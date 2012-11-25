@@ -33,6 +33,30 @@ do
     ln -s $SRC $DEST
 done
 
+echo ""
+echo "Linking custom snipmate snippets..."
+echo ""
+
+DOTVIMDIR="$HOME/.vim"
+SNIPPETSDIR="$DOTVIMDIR/snippets"
+
+if [ ! -d $DOTVIMDIR ]; then
+    echo "fatal: ~/.vim does not exist yet - install pathogen"
+    exit 1
+fi
+if [ -d $SNIPPETSDIR ]; then
+    echo "> Removing $SNIPPETSDIR"
+    rm  $SNIPPETSDIR
+fi
+
+echo "> Creating symlink $SNIPPETSDIR"
+ln -s "$PWD/vim/snippets" $SNIPPETSDIR
+
+
+echo ""
+echo "Linking zsh custom config..."
+echo ""
+
 mkdir -p "$PWD/zsh/oh-my-zsh/custom/plugins"
 
 ZSH_CUSTOMS="plugins/zsh-syntax-highlighting shaf.zsh-theme"
