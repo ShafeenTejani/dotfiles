@@ -1,4 +1,3 @@
-call pathogen#infect()
 " Load plugins pathogen-style.
 call pathogen#infect('~/dotfiles/vim/bundle')
 
