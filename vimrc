@@ -47,7 +47,7 @@ set wildignore+=*/.git/*,*.so,*.swp,*.zip
 set wildignore+=*/target/*
 
 " here we can either use jshint, jsl, gjslint, jslint, closurecompiler
-let g:syntastic_javascript_checker='jshint'
+let g:syntastic_javascript_checker='jsl'
 
 " always display the status line
 set laststatus=2
@@ -131,4 +131,23 @@ endfun
 
 " command to strip white space from any file
 nnoremap <leader>s :call <SID>StripTrailingWhitespaces()<cr>
+
+
+"statusline setup
+set statusline=%f       "tail of the filename
+
+set statusline+=%h      "help file flag
+set statusline+=%y      "filetype
+set statusline+=%r      "read only flag
+set statusline+=%m      "modified flag
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=\ %P    "percent through file
+set laststatus=2
 
