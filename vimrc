@@ -1,7 +1,9 @@
 " Load plugins pathogen-style.
 call pathogen#infect('~/dotfiles/vim/bundle')
 
-let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
+if has("mac")
+    let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
+endif
 
 " Use Vim settings, rather than vi settings.
 set nocompatible
