@@ -33,14 +33,14 @@ do
     ln -s $SRC $DEST
 done
 
-mkdir -p "$PWD/oh-my-zsh/custom/plugins"
+mkdir -p "$PWD/zsh/oh-my-zsh/custom/plugins"
 
 ZSH_CUSTOMS="plugins/zsh-syntax-highlighting shaf.zsh-theme"
 
 for CUSTOM in $ZSH_CUSTOMS
 do
-    SRC="$PWD/oh-my-zsh-custom/$CUSTOM"
-    DEST="$PWD/oh-my-zsh/custom/$CUSTOM"
+    SRC="$PWD/zsh/oh-my-zsh-custom/$CUSTOM"
+    DEST="$PWD/zsh/oh-my-zsh/custom/$CUSTOM"
     if [ -f $DEST -o -d $DEST ]; then
         echo "> Removing $DEST"
         rm -rf $DEST
