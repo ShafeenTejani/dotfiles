@@ -26,6 +26,10 @@ set smartcase  " case sensitive if it has captials
 set wildmenu
 set wildmode=full
 
+" toggle taglist
+let Tlist_Use_Right_Window = 1
+map <leader>l :TlistToggle<cr>
+
 " toggle TagBar
 map <leader>t :TagbarToggle<cr>
 
