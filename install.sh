@@ -2,14 +2,7 @@
 
 cd ~/dotfiles
 
-echo ""
-echo "Fetching latest dotfiles..."
-echo ""
-
-git pull
-git submodule init
-git submodule update
-
+./update.sh
 ./vim/install-vim.sh
 ./zsh/install-zsh.sh
 ./bash/install-bash.sh
