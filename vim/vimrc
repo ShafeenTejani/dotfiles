@@ -60,7 +60,9 @@ if has('gui_running')
 else
 	set background=dark
 endif
-	
+
+se t_Co=256
+let g:solarized_termcolors=256
 colorscheme solarized
 
 " fonts
