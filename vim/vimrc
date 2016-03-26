@@ -1,5 +1,5 @@
 " Load plugins pathogen-style.
-call pathogen#infect('~/dotfiles/vim/bundle')
+call pathogen#infect('~/dotfiles/vim/bundle/{}')
 
 if has("mac")
     let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
@@ -53,15 +53,6 @@ let g:syntastic_javascript_checker='jsl'
 syntax on
 filetype plugin indent on
 syntax enable
-
-" colours
-if has('gui_running')
-	set background=light
-else
-	set background=dark
-endif
-	
-colorscheme solarized
 
 " fonts
 if has("mac")
